@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/fullpage.js/dist/fullpage.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div id="fullpage">
+        <div class="section" data-anchor="cases">
+
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top ">
+                <div class="container-fluid  mb-3 mt-3 mx-5">
+                    <a class="navbar-brand" href="#cases">Covid-19 in Singapore</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-2 mb-2 mb-lg-0 ms-auto ">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#cases">Cases</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#progress">Vaccination Progress</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#centres">Vacination Centre</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="container mt-4">
+                <div class="row">
+                    <!-- Left Column for Text -->
+                    <div class="col-md-6">
+                        <h2>Cases</h2>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h3>Total Cases</h3>
+                                <p>257,510</p>
+                            </div>
+                            <div class="col-md-4">
+                                <h3>In Hospital</h3>
+                                <p>1,365</p>
+                            </div>
+                            <div class="col-md-4">
+                                <h3>Total Deaths</h3>
+                                <p>678</p>
+                            </div>
+                        </div>
+                        <p>The number of Covid-19 cases in Singapore has grown to 257510, with 2079 new cases reported
+                            on 31 Dec.</p>
+                        <p>Of these, 2030 were reported in the community and 40 in the workers’ dormitories. The
+                            remaining nine cases were imported.</p>
+                        <p>Of these, 2030 were reported in the community and 40 in the workers’ dormitories. The
+                            remaining nine cases were imported.</p>
+                    </div>
+
+                    <!-- Right Column for Chart/Table -->
+                    <div class="col-md-6">
+                        <h2>Daily Cases (past 2 weeks)</h2>
+                        <div>
+                            <canvas id="myChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" data-anchor="progress">
+            <div class="container mt-4 px-5">
+                <div class="row">
+                    <!-- Left col -->
+                    <div class="col-md-6">
+                        <h2>9 out of 10 Singaporeans</h2>
+                        <p>have been vaccinated</p>
+                        <div class="col-md-6 mb-2">
+                            <i class="fa-solid fa-user fa-3x me-2"></i>
+                            <i class="fa-solid fa-user fa-3x me-2"></i>
+                            <i class="fa-solid fa-user fa-3x me-2"></i>
+                            <i class="fa-solid fa-user fa-3x me-2"></i>
+                            <i class="fa-solid fa-user fa-3x me-2"></i>
+                        </div>
+                        <div class="col-md-6 mb-2">
+                            <i class="fa-solid fa-user fa-3x me-2"></i>
+                            <i class="fa-solid fa-user fa-3x me-2"></i>
+                            <i class="fa-solid fa-user fa-3x me-2"></i>
+                            <i class="fa-solid fa-user fa-3x me-2"></i>
+                            <i class="fa-regular fa-user fa-3x me-2"></i>
+                        </div>
+                    </div>
+                    <!-- Right col -->
+                    <div class="col-md-6">
+                        <h2>Vacination Progress</h2>
+                        <p>For every 100 people in Singapore, 88 have received their first dose and 87 are fully
+                            vaccinated as at 14 Dec.</p>
+                        <p>In addition, the Health Ministry reported that as at 14 Dec, 96 percent of the eligible
+                            population (aged 12 years and above) have completed their full regime, or received two doses
+                            of Covid-19 vaccines.</p>
+                        <p>With new Covid-19 variants such as Omicron surfacing, full vaccination will have to include
+                            booster shots as well.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" data-anchor="centres">
+            <div class="container mt-4">
+                <h2 class="text-center mb-4">Vaccination Centres</h2>
+                <p class="text-center mb-5">There are currently 12 vaccination centres in operation</p>
+                <div class="row">
+                    <!-- Left col -->
+                    <div class="col-md-6">
+                        <div class="map-container">
+                            <img src="singapore.svg" class="mx-auto d-block" alt="">
+                            <div class="overlay">
+                                <a href="#" class="pin fs-3 position-absolute" id="pin1"><i
+                                        class="fa-solid fa-location-pin"></i></a>
+                                <a href="#" class="pin fs-3 position-absolute" id="pin2"><i
+                                        class="fa-solid fa-location-pin"></i></a>
+                                <a href="#" class="pin fs-3 position-absolute" id="pin3"><i
+                                        class="fa-solid fa-location-pin"></i></a>
+                                <a href="#" class="pin fs-3 position-absolute" id="pin4"><i
+                                        class="fa-solid fa-location-pin"></i></a>
+                                <a href="#" class="pin fs-3 position-absolute" id="pin5"><i
+                                        class="fa-solid fa-location-pin"></i></a>
+                                <a href="#" class="pin fs-3 position-absolute" id="pin6"><i
+                                        class="fa-solid fa-location-pin"></i></a>
+                                <a href="#" class="pin fs-3 position-absolute" id="pin7"><i
+                                        class="fa-solid fa-location-pin"></i></a>
+                                <a href="#" class="pin fs-3 position-absolute" id="pin8"><i
+                                        class="fa-solid fa-location-pin"></i></a>
+                                <a href="#" class="pin fs-3 position-absolute" id="pin9"><i
+                                        class="fa-solid fa-location-pin"></i></a>
+                                <a href="#" class="pin fs-3 position-absolute" id="pin10"><i
+                                        class="fa-solid fa-location-pin"></i></a>
+                                <a href="#" class="pin fs-3 position-absolute" id="pin11"><i
+                                        class="fa-solid fa-location-pin"></i></a>
+                                <a href="#" class="pin fs-3 position-absolute" id="pin12"><i
+                                        class="fa-solid fa-location-pin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right col -->
+                    <div class="col-md-6">
+                        <div class="table-responsive" style="max-height: 400px;">
+                            <table class="clinics">
+                                <thead>
+                                    <tr>
+                                        <td>Name</td>
+                                        <td>Address</td>
+                                        <td>Vaccine Type</td>
+                                        <td>Phone</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Bedok Polyclinic</td>
+                                        <td>11 Bedok North Street 1 Heartbeat@Bedok #02-01, #03-01, Singapore 469662
+                                        </td>
+                                        <td>Pfizer</td>
+                                        <td>6343 1121</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bukit Batok Polyclinic</td>
+                                        <td>50 Bukit Batok West Avenue 3, Singapore 659164</td>
+                                        <td>Moderna</td>
+                                        <td>6343 1122</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bukit Merah Polyclinic</td>
+                                        <td>162 Bukit Merah Central Level 4, Singapore 150163</td>
+                                        <td>Pfizer</td>
+                                        <td>6343 1123</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Choa Chu Kang Polyclinic</td>
+                                        <td>2 Teck Whye Crescent, Singapore 688846</td>
+                                        <td>Moderna</td>
+                                        <td>6343 1124</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Clementi Polyclinic</td>
+                                        <td>451 Clementi Avenue 3, Singapore 120451</td>
+                                        <td>Pfizer</td>
+                                        <td>6343 1125</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Geylang Polyclinic</td>
+                                        <td>21 Geylang East Central, Singapore 389707</td>
+                                        <td>Pfizer</td>
+                                        <td>6343 1126</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hougang Polyclinic</td>
+                                        <td>89 Hougang Avenue 4, Singapore 538829</td>
+                                        <td>Pfizer</td>
+                                        <td>6765 1121</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jurong Polyclinic</td>
+                                        <td>190 Jurong East Avenue 1, Singapore 609788</td>
+                                        <td>Pfizer</td>
+                                        <td>6765 1122</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Marine Parade Polyclinic</td>
+                                        <td>80 Marine Parade Central, Singapore 440080</td>
+                                        <td>Pfizer</td>
+                                        <td>6765 1123</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Outram Polyclinic</td>
+                                        <td>3 Second Hospital Avenue, #02-00 Health Promotion Board Building, Singapore
+                                            168937</td>
+                                        <td>Comirnaty</td>
+                                        <td>6765 1124</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pasir Ris Polyclinic</td>
+                                        <td>1 Pasir Ris Drive 4, Singapore 519457</td>
+                                        <td>Comirnaty</td>
+                                        <td>6765 1125</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pioneer Polyclinic</td>
+                                        <td>26 Jurong West Street 61, Singapore 648201</td>
+                                        <td>Moderna</td>
+                                        <td>6765 1126</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <footer class="text-center bg-dark text-light py-3">
+                <div class="container">
+                    <p class="mb-0">&copy; Copyright 2021, The Lion Press</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/fullpage.js/dist/fullpage.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+    <script src="scripts.js"></script>
+
+</html>

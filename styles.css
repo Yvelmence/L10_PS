@@ -1,0 +1,95 @@
+.clinics {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.clinics th,
+.clinics td {
+    padding: 12px;
+    text-align: left;
+}
+
+.clinics thead {
+    background-color: #343a40;
+    color: white;
+}
+
+.clinics tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* Responsive table styles */
+@media (max-width: 576px) {
+    .clinics thead {
+        display: none;
+    }
+
+    .clinics tbody tr {
+        border-bottom: 2px solid #dee2e6;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .clinics tbody td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: inline-block;
+        width: 50%;
+        margin-bottom: 10px;
+    }
+}
+
+
+/* map-pins */
+#pin1{
+    top: 65%;
+    left: 39%;
+}
+#pin2{
+    top: 55%;
+    left: 20%;
+}
+#pin3{
+    top: 75%;
+    left: 29%
+}
+#pin4{
+    top: 45%;
+    left: 20%;
+}
+#pin5{
+    top: 64%;
+    left: 22%
+}
+#pin6{
+    top: 67%;
+    left: 34%
+}
+#pin7{
+    top: 54%;
+    left: 35%
+}
+#pin8{
+    top: 59%;
+    left: 20%
+}
+#pin9{
+    top: 70%;
+    left: 38%
+}
+#pin10{
+    top: 78%;
+    left: 30%
+}
+#pin11{
+    top: 53%;
+    left: 41%
+}
+#pin12{
+    top: 60%;
+    left: 17%
+}
+
+.section:last-child{
+    height: 55px;
+}
